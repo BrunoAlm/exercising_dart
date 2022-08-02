@@ -14,7 +14,7 @@ void main() {
   if (playerOption == 'Pedra' && machineOption == 'Tesoura' ||
       playerOption == 'Papel' && machineOption == 'Pedra' ||
       playerOption == 'Tesoura' && machineOption == 'Papel') {
-    print('O mano ai ganhou');
+    print('Aí ganhou né');
   }
   else if (playerOption == machineOption) {
     print('Ai empataram');

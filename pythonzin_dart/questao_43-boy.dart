@@ -34,8 +34,8 @@ class Lanches {
     {"id": 102, "nome": "Bauru com ovo", "valor": 1.50},
     {"id": 103, "nome": "Hamburguer", "valor": 1.20},
     {"id": 104, "nome": "Cheeseburguer", "valor": 1.30},
-    {"id": 105, "nome": "Refrigerante", "valor": 1.00}]
-    ''';
+    {"id": 105, "nome": "Refrigerante", "valor": 1.00}
+    ]''';
 
   // declaro essas variaveis dos lanches
   var ids = [], nomes = [], valores = [];

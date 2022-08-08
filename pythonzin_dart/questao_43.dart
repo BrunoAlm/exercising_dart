@@ -16,41 +16,49 @@
 import 'dart:io';
 
 void main() {
-  var menu = [
-    {'item': 'Cachorro Quente', 'valor': 100},
-    {'item': 'Bauru Simples', 'valor': 101},
-    {'item': 'Bauru com meus ovos', 'valor': 102},
-    {'item': 'Hamburguer', 'valor': 103},
-    {'item': 'Cheeseburguer', 'valor': 104},
-    {'item': 'Refrigerante', 'valor': 105},
-    {'item': 'Encerrar', 'valor': 0}
-  ];
+  int cod;
+  int quantidade;
+  double total = 0;
 
-  void displayMenu() {
-    var item = menu.map((item) => item['valor']);
-    item.forEach((element) {
-      print(element);
-    });
+  print('''Produto ------ Código ------ Valor
+ Cachorro Quente ------ 101 ------ 1,20
+ Bauru Simples ------ 102 ------ 1,30
+ Bauru com Ovo ------ 103 ------ 1,50
+ Hamburguer ------ 103 ------ 1,20
+ Chesseburguer ------ 104 ------ 1,30
+ Refrigerante ------ 105 ------ 1,00 
+  ''');
+
+  while (true) {
+    int quantidade_100 = 0;
+    int quantidade_101 = 0;
+    int quantidade_102 = 0;
+    int quantidade_103 = 0;
+    int quantidade_104 = 0;
+    int quantidade_105 = 0;
+    stdout.write("Informe o código do produto ou 9 para sair");
+    cod = int.parse(stdin.readLineSync()!);
+    if (cod == 9) {
+      print("Sai daqui gay!");
+    }
+    if (cod < 100 || cod > 105) {
+      print("Animal! Digita algo certo, CORNO!");
+    }
+
+    stdout.write("Informe a quantidade: ");
+    quantidade = int.parse(stdin.readLineSync()!);
+    if (cod == 100)
+      quantidade_100 = quantidade;
+    else if (cod == 101)
+      quantidade_101 += quantidade;
+    else if (cod == 102)
+      quantidade_102 += quantidade;
+    else if (cod == 103)
+      quantidade_103 += quantidade;
+    else if (cod == 104)
+      quantidade_104 += quantidade;
+    else if (cod == 105) quantidade_105 += quantidade;
   }
-
-  displayMenu();
-
-  bool chosing = true;
-  int option = 1;
-  int itemQuantity = 0;
-  double totalItem = 0;
-  double totalValue = 0;
-  // do {
-  //   switch (option) {
-  //     case 100:
-  //       stdout.write('Infome a quantidade: ');
-  //       itemQuantity = int.parse(stdin.readLineSync()!);
-  //       totalItem = itemQuantity * 1.20;
-  //       break;
-  //     case 0:
-  //       chosing = false;
-  //       break;
-  //     default:
-  //   }
-  // } while (chosing);
+  print("PEDIDO FECHADO!");
+  print("Quantidade ------ Codigo ------ Valor");
 }

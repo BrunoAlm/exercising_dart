@@ -7,7 +7,7 @@ int executarPor(int qtde, String Function(String) fn, String valor) {
 }
 
 void main() {
-  var meuPrint = (String valor) {
+   meuPrint = (String valor) {
     print(valor);
     return valor;
   };

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'dart:io';
 import 'dart:math';
 
@@ -139,8 +141,8 @@ String generateEasyPassword({
     lista.add(aux);
   }
   lista.shuffle();
-
-  return password = lista.join();
+  password = lista.join();
+  return password;
 }
 
 String generateMediumPassword({
@@ -167,8 +169,8 @@ String generateMediumPassword({
     lista.add(aux);
   }
   lista.shuffle();
-
-  return password = lista.join();
+  password = lista.join();
+  return password;
 }
 
 String generateHardPassword({
@@ -200,6 +202,6 @@ String generateHardPassword({
     lista.add(aux);
   }
   lista.shuffle();
-
-  return password = lista.join();
+  password = lista.join();
+  return password;
 }
